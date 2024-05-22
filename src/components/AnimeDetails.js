@@ -1,14 +1,10 @@
-// AnimeDetails.js
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 
 const AnimeDetails = ({ animes }) => {
-  const { name } = useParams();
+  const { id } = useParams();
+  const anime = animes.find(anime => anime.id === parseInt(id));
 
-  // Encontrar o anime com o nome correspondente
-  const anime = animes.find(anime => anime.name === name);
-
-  // Verificar se o anime foi encontrado
   if (!anime) {
     return <div>Não foi possível encontrar detalhes para este anime.</div>;
   }
@@ -20,7 +16,7 @@ const AnimeDetails = ({ animes }) => {
         <h3>{anime.name}</h3>
         <img src={anime.image} alt={anime.name} />
         <p>{anime.description}</p>
-        <Link to="/" style={{ textDecoration: 'none', color: 'blue', marginTop: '10px', display: 'block' }}>Voltar para Lista de Animes</Link>
+        <Link to="/">Voltar</Link>
       </div>
     </div>
   );

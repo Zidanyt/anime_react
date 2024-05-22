@@ -1,10 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const AnimeList = ({ animes, addToFavorites }) => {
+const NewAnimes = ({ animes }) => {
     return (
         <div>
-            <h2>Lista de Animes</h2>
+            <h2>Novos Animes</h2>
             <ul>
                 {animes.map(anime => (
                     <li key={anime.id}>
@@ -12,7 +12,7 @@ const AnimeList = ({ animes, addToFavorites }) => {
                         <Link to={`/anime/${anime.id}`}>
                             <img width={200} src={anime.image} alt={anime.name} />
                         </Link>
-                        <button onClick={() => addToFavorites(anime)}>Adicionar aos Favoritos</button>
+                        <p>{anime.description}</p>
                     </li>
                 ))}
             </ul>
@@ -20,4 +20,4 @@ const AnimeList = ({ animes, addToFavorites }) => {
     );
 }
 
-export default AnimeList;
+export default NewAnimes;
