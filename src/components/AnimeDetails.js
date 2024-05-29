@@ -1,5 +1,5 @@
 import React from 'react';
-import { useParams, Link } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 
 const AnimeDetails = ({ animes }) => {
   const { id } = useParams();
@@ -16,7 +16,6 @@ const AnimeDetails = ({ animes }) => {
         <h3>{anime.name}</h3>
         <img src={anime.image} alt={anime.name} />
         <p>{anime.description}</p>
-        <Link to="/">Voltar</Link>
       </div>
     </div>
   );

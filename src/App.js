@@ -8,20 +8,22 @@ import NewAnimes from './components/NewAnimes';
 import animes from './components/Data/animes';
 
 function App() {
-  const [favorites, setFavorites] = useState(() => {
-    const savedFavorites = localStorage.getItem('favorites');
-    return savedFavorites ? JSON.parse(savedFavorites) : [];
-  });
+  const initialFavorites = JSON.parse(localStorage.getItem('favorites')) || [];
+  const initialTop10 = JSON.parse(localStorage.getItem('top10')) || animes.filter(anime => anime.isTop10);
+  const initialNewAnimes = JSON.parse(localStorage.getItem('newAnimes')) || animes.filter(anime => anime.isNew);
 
-  const [top10, setTop10] = useState(() => {
-    const savedTop10 = localStorage.getItem('top10');
-    return savedTop10 ? JSON.parse(savedTop10) : animes.filter(anime => anime.isTop10);
-  });
+  const [favorites, setFavorites] = useState(initialFavorites);
+  const [top10, setTop10] = useState(initialTop10);
+  const [newAnimes, setNewAnimes] = useState(initialNewAnimes);
 
-  const [newAnimes, setNewAnimes] = useState(() => {
-    const savedNewAnimes = localStorage.getItem('newAnimes');
-    return savedNewAnimes ? JSON.parse(savedNewAnimes) : animes.filter(anime => anime.isNew);
-  });
+  useEffect(() => {
+    const savedAnimes = JSON.stringify(animes);
+    if (savedAnimes !== localStorage.getItem('animes')) {
+      localStorage.setItem('animes', savedAnimes);
+      setTop10(animes.filter(anime => anime.isTop10));
+      setNewAnimes(animes.filter(anime => anime.isNew));
+    }
+  }, []);
 
   useEffect(() => {
     localStorage.setItem('favorites', JSON.stringify(favorites));
