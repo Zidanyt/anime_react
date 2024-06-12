@@ -5,6 +5,7 @@ const animes = [
         image: "https://www.themoviedb.org/t/p/original/1vUS6jajouERVFZXZ1dl5AECMww.jpg",
         description: "ok",
         isTop10: true,
+        rating: 0,
         isNew: false
     },
     {
@@ -13,6 +14,7 @@ const animes = [
         image: "https://th.bing.com/th/id/OIP.nzx-nVOtKC7p_nOCunJ3EgAAAA?rs=1&pid=ImgDetMain",
         description: "teste",
         isTop10: true,
+        rating: 0,
         isNew: false
     },
     {
@@ -21,6 +23,7 @@ const animes = [
         image: "https://th.bing.com/th/id/OIP.WbV8dA1Q2PianVPxULGw-gHaEo?rs=1&pid=ImgDetMain",
         description: "teste",
         isTop10: true,
+        rating: 0,
         isNew: false
     },
     {
@@ -29,6 +32,7 @@ const animes = [
         image: "https://th.bing.com/th/id/OIP.Nd829mxHMlW-lbwpHcHUYwHaK5?pid=ImgDet&w=474&h=697&rs=1",
         description: "teste",
         isTop10: false,
+        rating: 0,
         isNew: false
     },
     {
@@ -37,6 +41,7 @@ const animes = [
         image: "https://i.pinimg.com/564x/a7/7b/96/a77b96c1aca02eae461a961fb46c6281.jpg",
         description: "teste",
         isTop10: false,
+        rating: 0,
         isNew: false
     },
     {
@@ -45,6 +50,7 @@ const animes = [
         image: "https://animefans.com.br/wp-content/uploads/2018/04/shingeki-no-kyojin-poster-1.jpg",
         description: "teste",
         isTop10: false,
+        rating: 0,
         isNew: false
     },
     {
@@ -53,6 +59,7 @@ const animes = [
         image: "https://th.bing.com/th/id/R.3b35183b97b277cdc8c448063b968c2f?rik=yk%2b0WXTyNWZVXw&pid=ImgRaw&r=0",
         description: "teste",
         isTop10: false,
+        rating: 0,
         isNew: false
     },
     {
@@ -61,6 +68,7 @@ const animes = [
         image: "https://i1.wp.com/ogre.natalie.mu/media/news/comic/2020/0914/jujutsukaisen_kv2.jpg?resize=565%2C800&ssl=1",
         description: "teste",
         isTop10: false,
+        rating: 0,
         isNew: false
     },
     {
@@ -69,6 +77,7 @@ const animes = [
         image: "https://th.bing.com/th/id/R.870f3b6d1d93f5b85df99e924d1f427b?rik=vuO8IRxpED22uQ&pid=ImgRaw&r=0",
         description: "teste",
         isTop10: false,
+        rating: 0,
         isNew: true
     },
     {
@@ -77,6 +86,7 @@ const animes = [
         image: "https://th.bing.com/th/id/OIP.hb3ZC711sjPzweshRbETmQAAAA?rs=1&pid=ImgDetMain",
         description: "teste",
         isTop10: true,
+        rating: 0,
         isNew: true
     },
     {
@@ -85,6 +95,7 @@ const animes = [
         image: "",
         description: "teste",
         isTop10: true,
+        rating: 0,
         isNew: true
     },
     {
@@ -93,6 +104,7 @@ const animes = [
         image: "",
         description: "teste",
         isTop10: true,
+        rating: 0,
         isNew: true
     },
     {
@@ -101,6 +113,7 @@ const animes = [
         image: "",
         description: "teste",
         isTop10: true,
+        rating: 0,
         isNew: true
     },
     {
@@ -109,6 +122,7 @@ const animes = [
         image: "",
         description: "teste",
         isTop10: true,
+        rating: 0,
         isNew: true
     },
     {
@@ -117,6 +131,7 @@ const animes = [
         image: "",
         description: "teste",
         isTop10: true,
+        rating: 0,
         isNew: true
     },
     {
@@ -125,6 +140,7 @@ const animes = [
         image: "",
         description: "teste",
         isTop10: true,
+        rating: 0,
         isNew: true
     },
     {
@@ -133,6 +149,7 @@ const animes = [
         image: "",
         description: "teste",
         isTop10: true,
+        rating: 0,
         isNew: true
     },
     {
@@ -141,6 +158,7 @@ const animes = [
         image: "",
         description: "teste",
         isTop10: true,
+        rating: 0,
         isNew: true
     },
     {
@@ -149,6 +167,7 @@ const animes = [
         image: "",
         description: "teste",
         isTop10: true,
+        rating: 0,
         isNew: true
     },
     {
@@ -157,6 +176,7 @@ const animes = [
         image: "",
         description: "teste",
         isTop10: true,
+        rating: 0,
         isNew: true
     },
     {
@@ -165,6 +185,7 @@ const animes = [
         image: "",
         description: "teste",
         isTop10: true,
+        rating: 0,
         isNew: true
     },
     {
@@ -173,6 +194,7 @@ const animes = [
         image: "",
         description: "teste",
         isTop10: true,
+        rating: 0,
         isNew: true
     },
     {
@@ -181,6 +203,7 @@ const animes = [
         image: "",
         description: "teste",
         isTop10: true,
+        rating: 0,
         isNew: true
     },
     {
@@ -189,6 +212,7 @@ const animes = [
         image: "",
         description: "teste",
         isTop10: true,
+        rating: 0,
         isNew: true
     },
     {
@@ -197,6 +221,7 @@ const animes = [
         image: "",
         description: "teste",
         isTop10: true,
+        rating: 0,
         isNew: true
     },
     {
@@ -205,6 +230,7 @@ const animes = [
         image: "",
         description: "teste",
         isTop10: true,
+        rating: 0,
         isNew: true
     },
     {
@@ -213,6 +239,7 @@ const animes = [
         image: "",
         description: "teste",
         isTop10: true,
+        rating: 0,
         isNew: true
     },
     {
@@ -221,6 +248,7 @@ const animes = [
         image: "",
         description: "teste",
         isTop10: true,
+        rating: 0,
         isNew: true
     },
     {
@@ -229,6 +257,7 @@ const animes = [
         image: "",
         description: "teste",
         isTop10: true,
+        rating: 0,
         isNew: true
     },
     {
@@ -237,6 +266,7 @@ const animes = [
         image: "",
         description: "teste",
         isTop10: true,
+        rating: 0,
         isNew: true
     },
 ];

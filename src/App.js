@@ -5,29 +5,26 @@ import AnimeDetails from './components/AnimeDetails';
 import Favorites from './components/Favorites';
 import Top10List from './components/Top10List';
 import NewAnimes from './components/NewAnimes';
-import animes from './components/Data/animes';
+import animesData from './components/Data/animes';
+
 
 function App() {
   const initialFavorites = JSON.parse(localStorage.getItem('favorites')) || [];
-  const initialTop10 = JSON.parse(localStorage.getItem('top10')) || animes.filter(anime => anime.isTop10);
-  const initialNewAnimes = JSON.parse(localStorage.getItem('newAnimes')) || animes.filter(anime => anime.isNew);
+  const initialTop10 = JSON.parse(localStorage.getItem('top10')) || animesData.filter(anime => anime.isTop10);
+  const initialNewAnimes = JSON.parse(localStorage.getItem('newAnimes')) || animesData.filter(anime => anime.isNew);
 
+  const [animes, setAnimes] = useState(JSON.parse(localStorage.getItem('animes')) || animesData);
   const [favorites, setFavorites] = useState(initialFavorites);
-  const [top10, setTop10] = useState(initialTop10);
-  const [newAnimes, setNewAnimes] = useState(initialNewAnimes);
+  const [top10] = useState(initialTop10);
+  const [newAnimes] = useState(initialNewAnimes);
 
   useEffect(() => {
-    const savedAnimes = JSON.stringify(animes);
-    if (savedAnimes !== localStorage.getItem('animes')) {
-      localStorage.setItem('animes', savedAnimes);
-      setTop10(animes.filter(anime => anime.isTop10));
-      setNewAnimes(animes.filter(anime => anime.isNew));
-    }
-  }, []);
+    localStorage.setItem('animes', JSON.stringify(animes));
+  }, [animes]);
 
   useEffect(() => {
     localStorage.setItem('favorites', JSON.stringify(favorites));
-  }, [favorites]);
+  }, [favorites]);  
 
   useEffect(() => {
     localStorage.setItem('top10', JSON.stringify(top10));
@@ -43,6 +40,16 @@ function App() {
     }
   };
 
+  const updateRating = (animeId, rating) => {
+    const updatedAnimes = animes.map(anime => {
+      if (anime.id === animeId) {
+        return { ...anime, rating };
+      }
+      return anime;
+    });
+    setAnimes(updatedAnimes);
+  };
+
   return (
     <Router>
       <div>
@@ -55,7 +62,7 @@ function App() {
           </ul>
         </nav>
         <Routes>
-          <Route path="/" element={<AnimeList animes={animes} addToFavorites={addToFavorites} />} />
+          <Route path="/" element={<AnimeList animes={animes} addToFavorites={addToFavorites} updateRating={updateRating} />} />
           <Route path="/anime/:id" element={<AnimeDetails animes={animes} />} />
           <Route path="/favorites" element={<Favorites favorites={favorites} />} />
           <Route path="/top10" element={<Top10List animes={top10} />} />
