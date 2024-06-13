@@ -3,19 +3,22 @@ const animes = [
         id: 1,
         name: "Fullmetal Alchemist: Brotherhood (2009)",
         image: "https://www.themoviedb.org/t/p/original/1vUS6jajouERVFZXZ1dl5AECMww.jpg",
-        description: "ok",
+        description: "baixo",
         isTop10: true,
         rating: 0,
-        isNew: false
+        year: 2002,
+        genre: "Ação, Aventura, Drama",    
     },
     {
         id: 2,
         name: "Hunter x Hunter (2011)",
         image: "https://th.bing.com/th/id/OIP.nzx-nVOtKC7p_nOCunJ3EgAAAA?rs=1&pid=ImgDetMain",
-        description: "teste",
+        description: "teste10",
         isTop10: true,
         rating: 0,
-        isNew: false
+        year: 2010,
+        genre: "Ação, Aventura, Drama",
+        isNew: false,
     },
     {
         id: 3,
@@ -24,6 +27,8 @@ const animes = [
         description: "teste",
         isTop10: true,
         rating: 0,
+        year: 2009,
+        genre: "Ação, Aventura, Drama",
         isNew: false
     },
     {
@@ -33,15 +38,19 @@ const animes = [
         description: "teste",
         isTop10: false,
         rating: 0,
+        year: 2009,
+        genre: "Ação, Aventura, Drama",
         isNew: false
     },
     {
         id: 5,
         name: "Koe no Katachi",
-        image: "https://i.pinimg.com/564x/a7/7b/96/a77b96c1aca02eae461a961fb46c6281.jpg",
+        image: "https://steamuserimages-a.akamaihd.net/ugc/860614665756309200/114E4AC19CDB8319AE4ED681C5FD5F9DFB076B54/",
         description: "teste",
         isTop10: false,
         rating: 0,
+        year: 2009,
+        genre: "Ação, Aventura, Drama",
         isNew: false
     },
     {
@@ -51,6 +60,8 @@ const animes = [
         description: "teste",
         isTop10: false,
         rating: 0,
+        year: 2009,
+        genre: "Ação, Aventura, Drama",
         isNew: false
     },
     {
@@ -60,6 +71,8 @@ const animes = [
         description: "teste",
         isTop10: false,
         rating: 0,
+        year: 2009,
+        genre: "Ação, Aventura, Drama",
         isNew: false
     },
     {
@@ -69,6 +82,8 @@ const animes = [
         description: "teste",
         isTop10: false,
         rating: 0,
+        year: 2009,
+        genre: "Ação, Aventura, Drama",
         isNew: false
     },
     {
@@ -78,6 +93,8 @@ const animes = [
         description: "teste",
         isTop10: false,
         rating: 0,
+        year: 2009,
+        genre: "Ação, Aventura, Drama",
         isNew: true
     },
     {
@@ -87,6 +104,8 @@ const animes = [
         description: "teste",
         isTop10: true,
         rating: 0,
+        year: 2009,
+        genre: "Ação, Aventura, Drama",
         isNew: true
     },
     {
@@ -96,6 +115,8 @@ const animes = [
         description: "teste",
         isTop10: true,
         rating: 0,
+        year: 2009,
+        genre: "Ação, Aventura, Drama",
         isNew: true
     },
     {
@@ -105,6 +126,8 @@ const animes = [
         description: "teste",
         isTop10: true,
         rating: 0,
+        year: 2009,
+        genre: "Ação, Aventura, Drama",
         isNew: true
     },
     {
@@ -114,6 +137,8 @@ const animes = [
         description: "teste",
         isTop10: true,
         rating: 0,
+        year: 2009,
+        genre: "Ação, Aventura, Drama",
         isNew: true
     },
     {
@@ -123,6 +148,8 @@ const animes = [
         description: "teste",
         isTop10: true,
         rating: 0,
+        year: 2009,
+        genre: "Ação, Aventura, Drama",
         isNew: true
     },
     {
@@ -132,6 +159,8 @@ const animes = [
         description: "teste",
         isTop10: true,
         rating: 0,
+        year: 2009,
+        genre: "Ação, Aventura, Drama",
         isNew: true
     },
     {
@@ -141,6 +170,8 @@ const animes = [
         description: "teste",
         isTop10: true,
         rating: 0,
+        year: 2009,
+        genre: "Ação, Aventura, Drama",
         isNew: true
     },
     {
@@ -150,6 +181,8 @@ const animes = [
         description: "teste",
         isTop10: true,
         rating: 0,
+        year: 2009,
+        genre: "Ação, Aventura, Drama",
         isNew: true
     },
     {
@@ -159,6 +192,8 @@ const animes = [
         description: "teste",
         isTop10: true,
         rating: 0,
+        year: 2009,
+        genre: "Ação, Aventura, Drama",
         isNew: true
     },
     {
@@ -168,6 +203,8 @@ const animes = [
         description: "teste",
         isTop10: true,
         rating: 0,
+        year: 2009,
+        genre: "Ação, Aventura, Drama",
         isNew: true
     },
     {
@@ -177,6 +214,8 @@ const animes = [
         description: "teste",
         isTop10: true,
         rating: 0,
+        year: 2009,
+        genre: "Ação, Aventura, Drama",
         isNew: true
     },
     {
@@ -186,6 +225,8 @@ const animes = [
         description: "teste",
         isTop10: true,
         rating: 0,
+        year: 2009,
+        genre: "Ação, Aventura, Drama",
         isNew: true
     },
     {
@@ -195,6 +236,8 @@ const animes = [
         description: "teste",
         isTop10: true,
         rating: 0,
+        year: 2009,
+        genre: "Ação, Aventura, Drama",
         isNew: true
     },
     {
@@ -204,6 +247,8 @@ const animes = [
         description: "teste",
         isTop10: true,
         rating: 0,
+        year: 2009,
+        genre: "Ação, Aventura, Drama",
         isNew: true
     },
     {
@@ -213,6 +258,8 @@ const animes = [
         description: "teste",
         isTop10: true,
         rating: 0,
+        year: 2009,
+        genre: "Ação, Aventura, Drama",
         isNew: true
     },
     {
@@ -222,6 +269,8 @@ const animes = [
         description: "teste",
         isTop10: true,
         rating: 0,
+        year: 2009,
+        genre: "Ação, Aventura, Drama",
         isNew: true
     },
     {
@@ -231,6 +280,8 @@ const animes = [
         description: "teste",
         isTop10: true,
         rating: 0,
+        year: 2009,
+        genre: "Ação, Aventura, Drama",
         isNew: true
     },
     {
@@ -240,6 +291,8 @@ const animes = [
         description: "teste",
         isTop10: true,
         rating: 0,
+        year: 2009,
+        genre: "Ação, Aventura, Drama",
         isNew: true
     },
     {
@@ -249,6 +302,8 @@ const animes = [
         description: "teste",
         isTop10: true,
         rating: 0,
+        year: 2009,
+        genre: "Ação, Aventura, Drama",
         isNew: true
     },
     {
@@ -258,6 +313,8 @@ const animes = [
         description: "teste",
         isTop10: true,
         rating: 0,
+        year: 2009,
+        genre: "Ação, Aventura, Drama",
         isNew: true
     },
     {
@@ -267,6 +324,8 @@ const animes = [
         description: "teste",
         isTop10: true,
         rating: 0,
+        year: 2009,
+        genre: "Ação, Aventura, Drama",
         isNew: true
     },
 ];

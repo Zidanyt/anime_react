@@ -1,8 +1,18 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 
-const AnimeDetails = ({ animes }) => {
+const AnimeDetails = () => {
   const { id } = useParams();
+  const [animes, setAnimes] = useState([]);
+
+  // Carregar animes do localStorage quando o componente é montado
+  useEffect(() => {
+    const storedAnimes = localStorage.getItem('animes');
+    if (storedAnimes) {
+      setAnimes(JSON.parse(storedAnimes));
+    }
+  }, []);
+
   const anime = animes.find(anime => anime.id === parseInt(id));
 
   if (!anime) {
@@ -15,6 +25,7 @@ const AnimeDetails = ({ animes }) => {
       <div>
         <h3>{anime.name}</h3>
         <img src={anime.image} alt={anime.name} />
+        <p><strong>Ano:</strong> {anime.year} | <strong>Gênero:</strong> {anime.genre} | <strong>Classificação:</strong> {anime.rating}</p>
         <p>{anime.description}</p>
       </div>
     </div>

@@ -1,15 +1,22 @@
 import React, { useState } from 'react';
 
 const Rating = ({ rating, onRating }) => {
-  const [localRating, setLocalRating] = useState(rating); // Estado local para rastrear a avaliação
+  const [localRating, setLocalRating] = useState(rating);
 
   const handleClick = (value) => {
-    setLocalRating(value); // Atualiza a avaliação local quando o usuário clica em uma estrela
-    onRating(value); // Chama a função de retorno de chamada com a nova avaliação
+    const newRating = value === localRating ? 0 : value;
+    setLocalRating(newRating);
+    onRating(newRating);
   };
 
   return (
     <div>
+      <span
+        style={{ cursor: 'pointer', color: localRating === 0 ? 'gold' : 'gray' }}
+        onClick={() => handleClick(0)}
+      >
+        Nenhuma Estrela
+      </span>
       {[1, 2, 3, 4, 5].map((value) => (
         <span
           key={value}
