@@ -11,12 +11,6 @@ const Rating = ({ rating, onRating }) => {
 
   return (
     <div>
-      <span
-        style={{ cursor: 'pointer', color: localRating === 0 ? 'gold' : 'gray' }}
-        onClick={() => handleClick(0)}
-      >
-        Nenhuma Estrela
-      </span>
       {[1, 2, 3, 4, 5].map((value) => (
         <span
           key={value}

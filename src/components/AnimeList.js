@@ -13,10 +13,6 @@ const AnimeList = ({ animes, addToFavorites, updateRating }) => {
   const [filteredAnimes, setFilteredAnimes] = useState(animes);
 
   useEffect(() => {
-    filterAnimes();
-  }, [searchTerm, selectedYear, selectedGenre, selectedRating, animes]);
-
-  const filterAnimes = () => {
     let filtered = animes;
 
     if (searchTerm) {
@@ -39,14 +35,14 @@ const AnimeList = ({ animes, addToFavorites, updateRating }) => {
 
     if (selectedRating > 0) {
       filtered = filtered.filter(anime =>
-        anime.rating >= selectedRating
+        anime.rating === selectedRating
       );
     }
 
     setFilteredAnimes(filtered);
     setVisibleAnimes(filtered.slice(0, 10));
     setHasMore(filtered.length > 10);
-  };
+  }, [searchTerm, selectedYear, selectedGenre, selectedRating, animes]);
 
   const fetchMoreData = () => {
     if (visibleAnimes.length >= filteredAnimes.length) {
@@ -65,7 +61,7 @@ const AnimeList = ({ animes, addToFavorites, updateRating }) => {
       <div>
         <Rating
           rating={selectedRating}
-          onRating={(rating) => setSelectedRating(rating)}
+          onRating={setSelectedRating}
         />
       </div>
       <InfiniteScroll
