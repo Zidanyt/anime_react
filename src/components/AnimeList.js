@@ -8,46 +8,49 @@ const AnimeList = ({ animes, addToFavorites, updateRating }) => {
   const [visibleAnimes, setVisibleAnimes] = useState([]);
   const [hasMore, setHasMore] = useState(true);
   const [searchTerm, setSearchTerm] = useState('');
-  const [selectedYear, setSelectedYear] = useState('');
-  const [selectedGenre, setSelectedGenre] = useState('');
+  const [selectedYear] = useState('');
+  const [selectedGenre] = useState('');
   const [selectedRating, setSelectedRating] = useState(0);
   const [filteredAnimes, setFilteredAnimes] = useState(animes);
 
   useEffect(() => {
-    filterAnimes();
+    const filterAnimes = () => {
+      let filtered = animes;
+  
+      if (searchTerm) {
+        filtered = filtered.filter(anime =>
+          anime.name.toLowerCase().includes(searchTerm.toLowerCase())
+        );
+      }
+  
+      if (selectedYear) {
+        filtered = filtered.filter(anime =>
+          anime.year === parseInt(selectedYear)
+        );
+      }
+  
+      if (selectedGenre) {
+        filtered = filtered.filter(anime =>
+          anime.genre.toLowerCase().includes(selectedGenre.toLowerCase())
+        );
+      }
+  
+      if (selectedRating > 0) {
+        filtered = filtered.filter(anime =>
+          anime.rating === selectedRating
+        );
+      }
+  
+      setFilteredAnimes(filtered);
+      setVisibleAnimes(filtered.slice(0, 10));
+      setHasMore(filtered.length > 10);
+    };
+  
+    filterAnimes(); // Chama a função diretamente ao montar o componente
+  
+    // Agora, useEffect observa todas as variáveis usadas dentro de filterAnimes
   }, [searchTerm, selectedYear, selectedGenre, selectedRating, animes]);
-
-  const filterAnimes = () => {
-    let filtered = animes;
-
-    if (searchTerm) {
-      filtered = filtered.filter(anime =>
-        anime.name.toLowerCase().includes(searchTerm.toLowerCase())
-      );
-    }
-
-    if (selectedYear) {
-      filtered = filtered.filter(anime =>
-        anime.year === parseInt(selectedYear)
-      );
-    }
-
-    if (selectedGenre) {
-      filtered = filtered.filter(anime =>
-        anime.genre.toLowerCase().includes(selectedGenre.toLowerCase())
-      );
-    }
-
-    if (selectedRating > 0) {
-      filtered = filtered.filter(anime =>
-        anime.rating === selectedRating
-      );
-    }
-
-    setFilteredAnimes(filtered);
-    setVisibleAnimes(filtered.slice(0, 10));
-    setHasMore(filtered.length > 10);
-  };
+  
 
   const fetchMoreData = () => {
     if (visibleAnimes.length >= filteredAnimes.length) {
