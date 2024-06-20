@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import PropTypes from 'prop-types';
 import InfiniteScroll from 'react-infinite-scroll-component';
 import { Link } from 'react-router-dom';
 import Rating from './Rating';
@@ -13,6 +14,10 @@ const AnimeList = ({ animes, addToFavorites, updateRating }) => {
   const [filteredAnimes, setFilteredAnimes] = useState(animes);
 
   useEffect(() => {
+    filterAnimes();
+  }, [searchTerm, selectedYear, selectedGenre, selectedRating, animes]);
+
+  const filterAnimes = () => {
     let filtered = animes;
 
     if (searchTerm) {
@@ -42,7 +47,7 @@ const AnimeList = ({ animes, addToFavorites, updateRating }) => {
     setFilteredAnimes(filtered);
     setVisibleAnimes(filtered.slice(0, 10));
     setHasMore(filtered.length > 10);
-  }, [searchTerm, selectedYear, selectedGenre, selectedRating, animes]);
+  };
 
   const fetchMoreData = () => {
     if (visibleAnimes.length >= filteredAnimes.length) {
@@ -59,6 +64,12 @@ const AnimeList = ({ animes, addToFavorites, updateRating }) => {
     <div>
       <h2>Lista de Animes</h2>
       <div>
+        <input
+          type="text"
+          placeholder="Buscar anime..."
+          value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)}
+        />
         <Rating
           rating={selectedRating}
           onRating={setSelectedRating}
@@ -71,7 +82,7 @@ const AnimeList = ({ animes, addToFavorites, updateRating }) => {
         loader={<h4>Tentando...</h4>}
         endMessage={
           <p style={{ textAlign: 'center' }}>
-            <b>Chegou aqui Erica??</b>
+            <b>Chegou ao final da lista de animes.</b>
           </p>
         }
       >
@@ -82,7 +93,7 @@ const AnimeList = ({ animes, addToFavorites, updateRating }) => {
               <Link to={`/anime/${anime.id}`}>
                 <img width={200} src={anime.image} alt={anime.name} />
               </Link>
-              <button onClick={() => addToFavorites(anime)}>Add to Favorites</button>
+              <button onClick={() => addToFavorites(anime)}>Adicionar aos Favoritos</button>
               <Rating
                 rating={anime.rating || 0}
                 onRating={(rating) => updateRating(anime.id, rating)} 
@@ -93,6 +104,12 @@ const AnimeList = ({ animes, addToFavorites, updateRating }) => {
       </InfiniteScroll>
     </div>
   );
+};
+
+AnimeList.propTypes = {
+  animes: PropTypes.array.isRequired,
+  addToFavorites: PropTypes.func.isRequired,
+  updateRating: PropTypes.func.isRequired,
 };
 
 export default AnimeList;

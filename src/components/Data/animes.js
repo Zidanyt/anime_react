@@ -111,7 +111,7 @@ const animes = [
     {
         id: 11,
         name: "One Piece",
-        image: "",
+        image: "https://picfiles.alphacoders.com/398/398018.jpg",
         description: "teste",
         isTop10: true,
         rating: 0,
@@ -122,7 +122,7 @@ const animes = [
     {
         id: 12,
         name: "Mushoku Tensei: Isekai Ittara Honki Dasu",
-        image: "",
+        image: "https://th.bing.com/th/id/R.196c78fe9102b12ccc9cd53bac6aaf4f?rik=X4%2fYZcnqtccs2A&pid=ImgRaw&r=0",
         description: "teste",
         isTop10: true,
         rating: 0,
@@ -133,7 +133,7 @@ const animes = [
     {
         id: 13,
         name: "Death Note",
-        image: "",
+        image: "https://th.bing.com/th/id/OIP.2bMZJ0CRCvFKGi7DrfgFnwHaLH?rs=1&pid=ImgDetMain",
         description: "teste",
         isTop10: true,
         rating: 0,
@@ -144,7 +144,7 @@ const animes = [
     {
         id: 14,
         name: "Kenpuu Denki Berserk",
-        image: "",
+        image: "https://th.bing.com/th/id/OIP.JnquF_nIjNo9C7m9zc-ekgHaKf?w=1084&h=1536&rs=1&pid=ImgDetMain",
         description: "teste",
         isTop10: true,
         rating: 0,
@@ -154,8 +154,8 @@ const animes = [
     },
     {
         id: 15,
-        name: "Kenpuu Denki Berserk",
-        image: "",
+        name: "Rascal Does Not Dream of Bunny Girl Senpai",
+        image: "https://th.bing.com/th/id/OIP.dXUHmVwzYotnnwFsa3303AHaNK?rs=1&pid=ImgDetMain",
         description: "teste",
         isTop10: true,
         rating: 0,
@@ -165,8 +165,8 @@ const animes = [
     },
     {
         id: 16,
-        name: "Rascal Does Not Dream of Bunny Girl Senpai",
-        image: "",
+        name: "JoJo no Kimyou na Bouken",
+        image: "https://th.bing.com/th/id/OIP.EmlM0mn674SiXAn_jRRLiQHaKX?rs=1&pid=ImgDetMain",
         description: "teste",
         isTop10: true,
         rating: 0,
@@ -176,8 +176,8 @@ const animes = [
     },
     {
         id: 17,
-        name: "JoJo no Kimyou na Bouken",
-        image: "",
+        name: "Spy x Family",
+        image: "https://th.bing.com/th/id/OIP.iicqXwqtBcjFaNq6CPr1SgHaMR?rs=1&pid=ImgDetMain",
         description: "teste",
         isTop10: true,
         rating: 0,
@@ -187,8 +187,8 @@ const animes = [
     },
     {
         id: 18,
-        name: "Spy x Family",
-        image: "",
+        name: "One Punch Man",
+        image: "https://th.bing.com/th/id/R.1276ae7d8bf58a0bb9ea8373f8f287b2?rik=62N1CT2HvWk%2fng&pid=ImgRaw&r=0",
         description: "teste",
         isTop10: true,
         rating: 0,
@@ -198,8 +198,8 @@ const animes = [
     },
     {
         id: 19,
-        name: "One Punch Man",
-        image: "",
+        name: "Keijo!!!",
+        image: "https://th.bing.com/th/id/OIP.I2hTSPIsdiJZsQ7O-mAQOQHaEK?rs=1&pid=ImgDetMain",
         description: "teste",
         isTop10: true,
         rating: 0,
@@ -209,8 +209,8 @@ const animes = [
     },
     {
         id: 20,
-        name: "Keijo!!!",
-        image: "",
+        name: "Kono Subarashii Sekai ni Shukufuku wo!",
+        image: "https://th.bing.com/th/id/R.80393e62a8f0152d3281e283fa2ad986?rik=QL%2fzM0E2vyQvwA&pid=ImgRaw&r=0",
         description: "teste",
         isTop10: true,
         rating: 0,
@@ -220,8 +220,8 @@ const animes = [
     },
     {
         id: 21,
-        name: "Kono Subarashii Sekai ni Shukufuku wo!",
-        image: "",
+        name: "Re:Zero kara Hajimeru Isekai Seikatsu",
+        image: "https://1.bp.blogspot.com/-Lc2btHzjAeY/YRARG6SEPCI/AAAAAAAAAAs/_sgwraIWtmgyxx49b1nWSoArE3fjOm6_QCLcBGAsYHQ/s1771/wp5978817.jpg",
         description: "teste",
         isTop10: true,
         rating: 0,
@@ -231,8 +231,8 @@ const animes = [
     },
     {
         id: 22,
-        name: "Re:Zero kara Hajimeru Isekai Seikatsu",
-        image: "",
+        name: "Tensei shitara Slime Datta Ken",
+        image: "https://th.bing.com/th/id/R.d114f4e794bd04f60a7efbb6df7af7cb?rik=%2b8%2fQq1aG%2bvYFdQ&pid=ImgRaw&r=0",
         description: "teste",
         isTop10: true,
         rating: 0,
@@ -242,8 +242,8 @@ const animes = [
     },
     {
         id: 23,
-        name: "Tensei shitara Slime Datta Ken",
-        image: "",
+        name: "Hellsing",
+        image: "https://m.media-amazon.com/images/M/MV5BZTkyNjA0YTItNTBmNC00ZjFiLTg0YWItOGQ4NGZkMmQ4NDI0XkEyXkFqcGdeQXVyNjAwNDUxODI@._V1_.jpg",
         description: "teste",
         isTop10: true,
         rating: 0,
@@ -253,8 +253,8 @@ const animes = [
     },
     {
         id: 24,
-        name: "Hellsing",
-        image: "",
+        name: "Dr. Stone",
+        image: "https://www.themoviedb.org/t/p/original/1liPa2ldguJFbx8X46RhdeG4VcK.jpg",
         description: "teste",
         isTop10: true,
         rating: 0,
@@ -264,8 +264,8 @@ const animes = [
     },
     {
         id: 25,
-        name: "Dr. Stone",
-        image: "",
+        name: "Boku dake ga Inai Machi",
+        image: "https://th.bing.com/th/id/OIP.-W_288sRh-jN2kHt8QCP-AHaK8?pid=ImgDet&w=474&h=700&rs=1",
         description: "teste",
         isTop10: true,
         rating: 0,
@@ -275,8 +275,8 @@ const animes = [
     },
     {
         id: 26,
-        name: "Boku dake ga Inai Machi",
-        image: "",
+        name: "Kuroko no Basket",
+        image: "https://i.pinimg.com/originals/41/02/24/41022453a7d31208e21250dbfe59ba84.jpg",
         description: "teste",
         isTop10: true,
         rating: 0,
@@ -286,8 +286,8 @@ const animes = [
     },
     {
         id: 27,
-        name: "Kuroko no Basket",
-        image: "",
+        name: "Boku no Hero Academia",
+        image: "https://th.bing.com/th/id/R.63329399881180aa0fb7120b7b7d5ff2?rik=S27v%2bYi0g6vQIQ&riu=http%3a%2f%2fmetagalaxia.com.br%2fwp-content%2fuploads%2f2017%2f10%2fboku-no-hero-academia-segunda-temporada-poster.jpg&ehk=69Z7KH1XAYUCAt2Ko7Zn6But9Ka2lnAddUYjk488yDw%3d&risl=&pid=ImgRaw&r=0",
         description: "teste",
         isTop10: true,
         rating: 0,
@@ -297,8 +297,8 @@ const animes = [
     },
     {
         id: 28,
-        name: "Boku no Hero Academia",
-        image: "",
+        name: "Kobayashi-san Chi no Maid Dragon",
+        image: "https://pm1.narvii.com/6432/b1d5448752ee8a40aa376c5de4fb7d84f6865ed5_hq.jpg",
         description: "teste",
         isTop10: true,
         rating: 0,
@@ -308,8 +308,8 @@ const animes = [
     },
     {
         id: 29,
-        name: "Kobayashi-san Chi no Maid Dragon",
-        image: "",
+        name: "Dororo",
+        image: "https://i.pinimg.com/736x/17/03/24/170324a9197ea1016fcfe41497f8832f.jpg",
         description: "teste",
         isTop10: true,
         rating: 0,
@@ -319,8 +319,8 @@ const animes = [
     },
     {
         id: 30,
-        name: "Dororo",
-        image: "",
+        name: "Tokyo Ghoul",
+        image: "https://i.pinimg.com/originals/b6/31/28/b6312835861c9a8bf4228c46b7dcae24.jpg",
         description: "teste",
         isTop10: true,
         rating: 0,
@@ -331,3 +331,8 @@ const animes = [
 ];
 
 export default animes;
+
+
+// https://i.pinimg.com/originals/2b/be/83/2bbe83c41babaf761466774be9e52a13.png
+
+// https://th.bing.com/th/id/OIP.2dcIUvkrMoyNdo02oq34pQHaF8?rs=1&pid=ImgDetMain

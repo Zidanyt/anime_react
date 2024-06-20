@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
 const Top10List = ({ animes }) => {
@@ -17,6 +18,10 @@ const Top10List = ({ animes }) => {
       </ul>
     </div>
   );
+};
+
+Top10List.propTypes = {
+  animes: PropTypes.array.isRequired,
 };
 
 export default Top10List;

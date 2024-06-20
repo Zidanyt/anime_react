@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
 const Favorites = ({ favorites }) => {
@@ -18,5 +19,10 @@ const Favorites = ({ favorites }) => {
         </div>
     );
 }
+
+Favorites.propTypes = {
+    favorites: PropTypes.array.isRequired,
+  };
+
 
 export default Favorites;

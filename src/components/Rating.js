@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 
 const Rating = ({ rating, onRating }) => {
   const [localRating, setLocalRating] = useState(rating);
@@ -22,6 +23,11 @@ const Rating = ({ rating, onRating }) => {
       ))}
     </div>
   );
+};
+
+Rating.propTypes = {
+  rating: PropTypes.number.isRequired,
+  onRating: PropTypes.func.isRequired,
 };
 
 export default Rating;

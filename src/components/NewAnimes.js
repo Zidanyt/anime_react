@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
 const NewAnimes = ({ animes }) => {
@@ -19,5 +20,9 @@ const NewAnimes = ({ animes }) => {
         </div>
     );
 }
+
+NewAnimes.propTypes = {
+    animes: PropTypes.array.isRequired,
+  };
 
 export default NewAnimes;
