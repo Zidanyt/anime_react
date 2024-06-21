@@ -7,7 +7,8 @@ const animes = [
         isTop10: true,
         rating: 0,
         year: 2002,
-        genre: "Ação, Aventura, Drama",    
+        genre: "Ação, Aventura, Drama",
+        desenhos: false, 
     },
     {
         id: 2,
@@ -327,6 +328,17 @@ const animes = [
         year: 2009,
         genre: "Ação, Aventura, Drama",
         isNew: true
+    },
+    {
+        id: 31,
+        name: "Hora de Aventura",
+        image: "https://th.bing.com/th/id/R.5a9474456b2a6193cd1d7072a8a836db?rik=qIPbcLY2Tyncrg&pid=ImgRaw&r=0",
+        description: "teste",
+        isTop10: false,
+        rating: 0,
+        year: 2000,
+        genre: "Ação",
+        desenhos: true, 
     },
 ];
 

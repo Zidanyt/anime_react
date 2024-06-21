@@ -2,10 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
-const Top10List = ({ animes }) => {
+const Top10List = ({ animes, title }) => {
   return (
     <div>
-      <h2>Top 10 Animes</h2>
+      <h2>{title}</h2>
       <ul>
         {animes.map(anime => (
           <li key={anime.id}>
@@ -21,6 +21,7 @@ const Top10List = ({ animes }) => {
 };
 
 Top10List.propTypes = {
+  title: PropTypes.string.isRequired,
   animes: PropTypes.array.isRequired,
 };
 

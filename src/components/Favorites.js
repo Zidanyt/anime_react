@@ -2,10 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
-const Favorites = ({ favorites }) => {
+const Favorites = ({ favorites, title }) => {
     return (
         <div>
-            <h2>Favoritos</h2>
+            <h2>{title}</h2>
             <ul>
                 {favorites.map(anime => (
                     <li key={anime.id}>
@@ -20,7 +20,8 @@ const Favorites = ({ favorites }) => {
     );
 }
 
-Favorites.propTypes = {
+Favorites.propTypes = {  
+    title: PropTypes.string.isRequired,
     favorites: PropTypes.array.isRequired,
   };
 

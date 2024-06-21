@@ -4,7 +4,7 @@ import InfiniteScroll from 'react-infinite-scroll-component';
 import { Link } from 'react-router-dom';
 import Rating from './Rating';
 
-const AnimeList = ({ animes, addToFavorites, updateRating }) => {
+const AnimeList = ({ title, animes, addToFavorites, updateRating }) => {
   const [visibleAnimes, setVisibleAnimes] = useState([]);
   const [hasMore, setHasMore] = useState(true);
   const [searchTerm, setSearchTerm] = useState('');
@@ -16,41 +16,40 @@ const AnimeList = ({ animes, addToFavorites, updateRating }) => {
   useEffect(() => {
     const filterAnimes = () => {
       let filtered = animes;
-  
+
       if (searchTerm) {
         filtered = filtered.filter(anime =>
           anime.name.toLowerCase().includes(searchTerm.toLowerCase())
         );
       }
-  
+
       if (selectedYear) {
         filtered = filtered.filter(anime =>
           anime.year === parseInt(selectedYear)
         );
       }
-  
+
       if (selectedGenre) {
         filtered = filtered.filter(anime =>
           anime.genre.toLowerCase().includes(selectedGenre.toLowerCase())
         );
       }
-  
+
       if (selectedRating > 0) {
         filtered = filtered.filter(anime =>
           anime.rating === selectedRating
         );
       }
-  
+
       setFilteredAnimes(filtered);
       setVisibleAnimes(filtered.slice(0, 10));
       setHasMore(filtered.length > 10);
     };
-  
+
     filterAnimes(); // Chama a função diretamente ao montar o componente
-  
+
     // Agora, useEffect observa todas as variáveis usadas dentro de filterAnimes
   }, [searchTerm, selectedYear, selectedGenre, selectedRating, animes]);
-  
 
   const fetchMoreData = () => {
     if (visibleAnimes.length >= filteredAnimes.length) {
@@ -65,7 +64,7 @@ const AnimeList = ({ animes, addToFavorites, updateRating }) => {
 
   return (
     <div>
-      <h2>Lista de Animes</h2>
+      <h2>{title}</h2>
       <div>
         <input
           type="text"
@@ -110,6 +109,7 @@ const AnimeList = ({ animes, addToFavorites, updateRating }) => {
 };
 
 AnimeList.propTypes = {
+  title: PropTypes.string.isRequired,
   animes: PropTypes.array.isRequired,
   addToFavorites: PropTypes.func.isRequired,
   updateRating: PropTypes.func.isRequired,
