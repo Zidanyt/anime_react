@@ -334,10 +334,11 @@ const animes = [
         name: "Hora de Aventura",
         image: "https://th.bing.com/th/id/R.5a9474456b2a6193cd1d7072a8a836db?rik=qIPbcLY2Tyncrg&pid=ImgRaw&r=0",
         description: "teste",
-        isTop10: false,
+        isTop10: true,
         rating: 0,
         year: 2000,
         genre: "Ação",
+        isNew: true,
         desenhos: true, 
     },
 ];
