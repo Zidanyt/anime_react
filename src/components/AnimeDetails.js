@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 
 const AnimeDetails = () => {
   const { id } = useParams();
+  const navigate = useNavigate();
   const [animes, setAnimes] = useState([]);
 
   // Carregar animes do localStorage quando o componente é montado
@@ -21,6 +22,7 @@ const AnimeDetails = () => {
 
   return (
     <div>
+      <button onClick={() => navigate(-1)} >Voltar</button>
       <h2>Detalhes do Anime</h2>
       <div>
         <h3>{anime.name}</h3>
